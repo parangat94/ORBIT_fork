@@ -1,0 +1,17 @@
+blade:
+  deck_space: 360     # m^2 60*6m assumed chord length
+  length: 75.5        # m 159/2 with 4m hub diam
+  mass: 60            # t SAL brochure was
+hub_height: 102       # m
+nacelle:
+  deck_space: 200     # m^2
+  mass: 600           # t guess
+name: COE_2020_8MW
+rotor_diameter: 159   # m
+tower:
+  deck_space: 34      # m^2 assume vertical and 7m diam (See SAL brochure re Walney ext.)
+  sections: 3         # n
+  length: 34         # m
+  mass: 125          # t
+turbine_rating: 8.0     # MW
+rated_windspeed: 12   # m/s

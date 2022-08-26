@@ -1,0 +1,56 @@
+OffshoreSubstationInstallation:
+  feeder: floating_barge
+array_cable_install_vessel: example_cable_lay_vessel
+array_system:
+  free_cable_length: 0.5
+array_system_design:
+  cables:
+  - XLPE_630mm_66kV # matches orca based on what I found
+commissioning: 0.01
+decommissioning: 0.15
+design_phases:
+- ArraySystemDesign
+- ExportSystemDesign
+- MooringSystemDesign
+- OffshoreSubstationDesign
+- SemiSubmersibleDesign
+export_cable_install_vessel: example_cable_lay_vessel
+mooring_install_vessel: example_support_vessel
+oss_install_vessel: floating_heavy_lift_vessel
+support_vessel: example_support_vessel
+towing_vessel: example_towing_vessel
+towing_vessel_groups:
+  num_groups : 1 # note these numbers are different than the default for ORBIT- I believe ORCA assumes only one installation group of 3 vessels total for floating
+  station_keeping_vessels: 1
+  towing_vessels: 2
+export_system_design:
+  cables: XLPE_1000m_220kV # matches orca based on what I found
+  percent_added_length: 0.0
+install_phases:
+  ArrayCableInstallation: 0
+  ExportCableInstallation: 0
+  MooredSubInstallation: 0
+  MooringSystemInstallation: 0
+  OffshoreSubstationInstallation: 0
+landfall:
+  interconnection_distance: 8 # onshore spur line = dist_l_to_ts from ORCA
+  trench_length: 6
+plant:
+  capacity : 600 # MW
+  layout: grid
+  num_turbines: 75
+  row_spacing: 7
+  substation_distance: 1
+  turbine_spacing: 7
+port:
+  monthly_rate: 2000000.0
+  sub_assembly_lines: 3
+  turbine_assembly_cranes: 3
+  num_cranes : 3
+site:
+  depth: 739
+  distance: 189
+  distance_to_landfall: 36
+substructure:
+  takt_time: 168
+turbine: COE_2020_8MW

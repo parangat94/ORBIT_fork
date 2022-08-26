@@ -58,3 +58,4 @@ project_parameters:
   turbine_capex: 1500
   commissioning: 0.01
   decommissioning: 0.15
+  opex_rate: 150
